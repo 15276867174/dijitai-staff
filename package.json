@@ -1,0 +1,35 @@
+{
+  "name": "digital-employee-assistant",
+  "version": "1.0.0",
+  "description": "数字员工助手 - AI驱动的桌面办公助手",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package:win": "electron-vite build && electron-builder --win",
+    "package:mac": "electron-vite build && electron-builder --mac",
+    "package:linux": "electron-vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "docx": "^9.7.1",
+    "electron-store": "^8.1.0",
+    "mammoth": "^1.12.0",
+    "openai": "^4.52.0",
+    "pinia": "^2.1.7",
+    "sharp": "^0.35.3",
+    "tesseract.js": "^7.0.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.0.0",
+    "typescript": "^5.3.3",
+    "vue-tsc": "^2.0.6"
+  }
+}

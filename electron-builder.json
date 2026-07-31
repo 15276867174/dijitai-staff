@@ -1,0 +1,41 @@
+{
+  "appId": "com.digital-employee.assistant",
+  "productName": "数字员工助手",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/tessdata",
+      "to": "tessdata"
+    },
+    {
+      "from": "resources/icon.png",
+      "to": "icon.png"
+    }
+  ],
+  "win": {
+    "target": ["nsis"],
+    "icon": "resources/icon.ico",
+    "artifactName": "${productName}-${version}-setup.${ext}",
+    "signAndEditExecutable": false
+  },
+  "mac": {
+    "target": ["dmg"],
+    "icon": "resources/icon.icns",
+    "artifactName": "${productName}-${version}.${ext}"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "resources/icon.png",
+    "artifactName": "${productName}-${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true
+  }
+}
